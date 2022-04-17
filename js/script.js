@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-var userName = prompt('What is your name?');
-alert('Hello, ' + userName + '! How are you?');
-=======
 var m = '#',
     n = '\n#';
 
@@ -29,4 +25,3 @@ while ( c < 3) {
     console.log(mes);
   }
 }
->>>>>>> Stashed changes
