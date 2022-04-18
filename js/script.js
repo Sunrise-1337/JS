@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-var userName = prompt('What is your name?');
-alert('Hello, ' + userName + '! How are you?');
-=======
 //  1 задача
 var act = '';
 
@@ -48,4 +44,3 @@ for (var i = 0; i < am; i++){
 
 // 4 задача
 alert(result);
->>>>>>> Stashed changes
