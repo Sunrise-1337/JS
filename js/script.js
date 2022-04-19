@@ -1,32 +1,5 @@
 var m = '#',
     n = '\n#';
-<<<<<<< Updated upstream
-
-for( var i = 0; i < 7; i++){
-  n = n + '#',
-  m = m + n;
-}
-
-console.log(m)
-
-var line = "############################\n",
-    rest = "#####                 ######\n##   ***                **##\n#   *##**         **  O  *##\n#    ***     O    ##**    *#\n#       O         ##***    #\n#                 ##**     #\n#   O       #*             #\n#*          #**       O    #\n#***        ##**    O    **#\n##****     ###***       *###\n";
-var c = 0,
-    mes = '',
-    d = 0;
-
-while ( c < 3) {
-  c++;
-  mes = mes + line;
-  while (d  < 1) {
-    mes = mes + rest;
-    d++;
-  }
-  if (c == 2){
-    console.log(mes);
-  }
-}
-=======
 
 for( var i = 0; i < 7; i++){
   n = n + '#',
@@ -96,7 +69,7 @@ var ex = '';
     if (i == 1 || i == 13 || i == 28) ex += '#';
     if (i > 1 && i < 5 || i > 5 && i < 13 || i > 14 && i < 28) ex += ' ';
     if (i == 14 ) ex += '*';
-    if (i == 9) ex += 'O';
+    if (i == 5) ex += 'O';
     if (i == 29) ex += '\n';
   }
 
@@ -132,4 +105,3 @@ var ex = '';
   }
 
 console.log(ex)
->>>>>>> Stashed changes
