@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-var userName = prompt('What is your name?');
-alert('Hello, ' + userName + '! How are you?');
-=======
 // Задача 1
 
 // function calc (op1, op2){
@@ -229,4 +225,3 @@ alert('Hello, ' + userName + '! How are you?');
 // for (;;){
 //     getSequence(start, step)
 // }
->>>>>>> Stashed changes
