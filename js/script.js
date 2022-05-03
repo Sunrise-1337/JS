@@ -1,5 +1,6 @@
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '! How are you?');// Задача 1
+// Задача 1
 
 // var arr =  [{name: 'Vasya', age: 24}, {name: 'Petya', age: 12}, {name: 'Fedya', age: 6}, {name: 'Ann', age: 18}, {name: 'Nastya', age: 40}];
 
