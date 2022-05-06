@@ -1,5 +1,6 @@
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '! How are you?');// Задача 1
+// Задача 1
 
 // var array = [2, 3, 4, 5, 6, 7],
 //     l = array.length,
