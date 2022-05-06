@@ -1,0 +1,16 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+}
+/* Заголовок */
+h1{
+    text-align: center;
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    text-shadow: 0px 0px 3px black;
+}
+.pic{
+    margin-top: 30px;
+    text-align: center;
+}
