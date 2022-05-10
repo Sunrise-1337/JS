@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-var userName = prompt('What is your name?');
-alert('Hello, ' + userName + '! How are you?');
-=======
 // Задача 1
 
 function makePassword(){
@@ -38,4 +34,3 @@ var test = randomGacha();
 for (var i = 0; i < 60; i++){
     test();    
 }
->>>>>>> Stashed changes
