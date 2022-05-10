@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '! How are you?');
+=======
+// Задача 1
+
 function makePassword(){
     // получаем пароль с сервера
     var password = 'Vladislav2003';
