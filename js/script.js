@@ -12,6 +12,7 @@ var clock = setInterval(function (){
 
     if (time[0] == time2[0] && time[1] == time2[1]){
         alert('Wake up, Samurai. We have a city to burn')
+        // Тут должна была быть музыкальная отсылка на киберпанк(
         return clearInterval(clock)
     }
 }, 1000);
