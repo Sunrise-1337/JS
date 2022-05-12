@@ -1,0 +1,23 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+}
+/* Заголовок */
+.clock-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 50%;
+    width: 100%;
+    padding: 20px;
+    height: 20%;
+    background-color: aqua;
+}
+#clock{
+    color: white;
+    font-size: 70px;
+}
