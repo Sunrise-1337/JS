@@ -30,7 +30,7 @@ function start(){
     }
 }
 
-var wrap = document.querySelector('.wrap');
+// Ивент
 
 document.addEventListener('click', function (e){
     var elem = e.target;
