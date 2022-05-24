@@ -1,0 +1,41 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Дизайн кнопок */
+
+.wrap{
+    display: flex;
+    padding: 10px;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    flex-wrap: wrap;
+    max-width: 410px;
+    min-width: 410px;
+}
+
+.button{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.muerto{
+    background-color: red;
+}
+
+.mar{
+    background-color: blue
+}
