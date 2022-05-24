@@ -47,12 +47,3 @@ document.addEventListener('click', function (e){
 })
 
 start()
-
-
-// var i = '' + 6 + '-' + 'b';
-
-// if (ships.includes(i)){
-//     console.log('party')
-// } else {
-//     console.log('summertime sadness')
-// }
