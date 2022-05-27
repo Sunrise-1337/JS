@@ -13,7 +13,8 @@ var i = 1,
         [3, 6, 9],
         [1, 5, 9],
         [3, 5, 7]
-    ];
+    ],
+    won = false;
 
 // Генерация полей
 
@@ -46,6 +47,7 @@ var relod = function(){
     i = 0;
     circle = []
     cros = []
+    won = false
     wrap.remove('button')
     start()
 }
@@ -60,14 +62,26 @@ var winCheck = function(mas){
         for (var l = 0; l < elem.length; l++){
             if (mas.includes(elem[l])){
                 count++
-                console.log(count)
                 if (count == 3){
                     alert('' + user + ' has won')
+                    won = true
+                    stopClick()
                     break
                 }
             }
         }
     }
+}
+
+// Некликабельность
+
+var stopClick = function(){
+    var btns = document.querySelectorAll('.button');
+    console.log(btns)
+
+    btns.forEach(function (elem){
+        elem.classList.remove('click')
+    })
 }
 
 // Ивенты
@@ -78,17 +92,24 @@ document.addEventListener('click', function (e){
 
     if (check) {
         if (i%2 == 0){
-            user = 'Нолики';
-            cros.push(elem.dataset.id)
+            cros.push(parseInt(elem.dataset.id))
             elem.classList.add('muerto')
-            alert('Очередь: ' + user)
             winCheck(cros)
+            user = 'Нолики';
+            if (!won){
+                alert('Очередь: ' + user)
+            }
         } else {
-            user = 'Крестики';
-            circle.push(elem.dataset.id)
+            circle.push(parseInt(elem.dataset.id))
             elem.classList.add('mar')
-            alert('Очередь: ' + user)
             winCheck(circle)
+            user = 'Крестики';
+            if (!won){
+                alert('Очередь: ' + user)
+            }
+        }
+        if (i == 9) {
+            alert('Ничья')
         }
         elem.classList.remove('click')
         i++
@@ -99,7 +120,7 @@ document.addEventListener('click', function (e){
     }
 })
 
-alert('Очередь User 1')
+alert('Очередь Нолики')
 
 start()
 
