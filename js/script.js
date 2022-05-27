@@ -14,7 +14,7 @@ var i = 1,
         [1, 5, 9],
         [3, 5, 7]
     ],
-    won = false;
+    noMove = false;
 
 // Генерация полей
 
@@ -47,7 +47,7 @@ var relod = function(){
     i = 0;
     circle = []
     cros = []
-    won = false
+    noMove = false
     wrap.remove('button')
     start()
 }
@@ -64,7 +64,7 @@ var winCheck = function(mas){
                 count++
                 if (count == 3){
                     alert('' + user + ' has won')
-                    won = true
+                    noMove = true
                     stopClick()
                     break
                 }
@@ -91,12 +91,16 @@ document.addEventListener('click', function (e){
     var check = elem.matches('.click');
 
     if (check) {
+        if (i == 9) {
+            alert('Ничья')
+            noMove = true
+        }
         if (i%2 == 0){
             cros.push(parseInt(elem.dataset.id))
             elem.classList.add('muerto')
             winCheck(cros)
             user = 'Нолики';
-            if (!won){
+            if (!noMove){
                 alert('Очередь: ' + user)
             }
         } else {
@@ -104,12 +108,9 @@ document.addEventListener('click', function (e){
             elem.classList.add('mar')
             winCheck(circle)
             user = 'Крестики';
-            if (!won){
+            if (!noMove){
                 alert('Очередь: ' + user)
             }
-        }
-        if (i == 9) {
-            alert('Ничья')
         }
         elem.classList.remove('click')
         i++
