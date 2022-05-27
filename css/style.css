@@ -1,0 +1,56 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Дизайн кнопок */
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    flex-wrap: wrap;
+    max-width: 606px;
+    min-width: 606px;
+}
+
+.button{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+}
+
+.restart{
+    height: 100px;
+    width: 100px;
+    outline: none;
+    border: 3px solid black;
+    background: url("https://cutt.ly/IHN53NE");
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center center;
+}
+
+img{
+    height: 50%;
+    width: 50%;
+}
+
+.muerto{
+    background: no-repeat center url("../assets/cross.png");
+}
+
+.mar{
+    background: no-repeat center url("../assets/circle.png");
+}
