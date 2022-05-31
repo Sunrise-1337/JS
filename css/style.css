@@ -1,0 +1,33 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    position: fixed;
+    width: 485px;
+}
+
+.tank{
+    position: relative;
+    width: 400px;
+    right: -85px;
+    z-index: -1;
+}
+
+.bullet{
+    position: absolute;
+    height: 30px;
+    transform: rotate(-180deg);
+    left: 10px;
+    bottom: 71px;
+}
+
+.fire{
+    position: absolute;
+    height: 30px;
+    transform: rotate(-90deg);
+    bottom: 71px;
+    left: 60px;
+}
