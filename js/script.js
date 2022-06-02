@@ -40,6 +40,7 @@ document.addEventListener('keydown', function (e){
     var tTank = tank.getBoundingClientRect().top;
     var fire = document.querySelector('.fire');
     var bullet = document.querySelector('.bullet');
+    var top = parseInt(getComputedStyle(tank).top) || 0
 
     if (opt.move){
         switch (e.code) {
@@ -67,7 +68,7 @@ document.addEventListener('keydown', function (e){
                 if (tTank < 160){
                     tank.style.top = 160 + 'px'
                 } else {
-                    tank.style.top = tTank - step + 'px'
+                    tank.style.top = top - step + 'px'
                 }
 
                 tank.style.transform = 'rotate(90deg)';
@@ -77,7 +78,7 @@ document.addEventListener('keydown', function (e){
                 if (tTank >= window.innerHeight - hTank - step){
                     tank.style.top = window.innerHeight - hTank + 'px'
                 } else {
-                    tank.style.top = tTank + step + 'px'
+                    tank.style.top = top + step + 'px'
                 }
 
                 tank.style.transform = 'rotate(270deg)';
