@@ -76,7 +76,7 @@ document.addEventListener('keydown', function (e){
 
             case "KeyS":
                 if (tTank >= window.innerHeight - hTank - step){
-                    tank.style.top = window.innerHeight - hTank + 'px'
+                    tank.style.top = top + 'px'
                 } else {
                     tank.style.top = top + step + 'px'
                 }
