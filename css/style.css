@@ -1,0 +1,43 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.block{
+    background-color: black;
+    position: absolute;
+    z-index: 500;
+}
+
+.wrap{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.timer{
+    padding: 40px 60px;
+    font-size: 50px;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+.mouse{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.cat{
+    height: 150px;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
