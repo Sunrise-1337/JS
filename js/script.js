@@ -16,7 +16,7 @@ var text = document.querySelector('.timer'),
     x2 = 0,
     y1 = 0,
     y2 = 0,
-    blockNum = 0;
+    spawnCount = 0;
 
 // Начало игры по клику
 
@@ -32,8 +32,6 @@ body.addEventListener('click',function start(){
     wrap.prepend(mouse)
     opt.game = true
     startSec()
-
-    spawnBlock()
 
 
     var cat = document.createElement('img'),
@@ -71,6 +69,10 @@ function startSec(){
             }
                 
             sec++
+            spawnCount++
+            if (spawnCount%5 == 0){
+                spawnBlock()
+            }
         }
 
         if (opt.result){
@@ -113,31 +115,28 @@ wrap.addEventListener('mousemove', function (e){
 // Спавн блоков
 
 function spawnBlock(){
-    setInterval(function (){
-        if (opt.game){
-            blockNum++
+    if (opt.game){
 
-            var block = document.createElement('div'),
-                wrap = document.querySelector('.wrap');
+        var block = document.createElement('div'),
+            wrap = document.querySelector('.wrap');
 
-            block.className = 'block';
+        block.className = 'block';
 
 
-            console.log('' + random(1, window.innerHeight) + 'px;')
-            block.style.top = '' + 10 + ' px;';
-            block.style.left =  '' + 20 + ' px;';
-            block.style.width =  '' + random(50, 150) + ' px;';
-            block.style.height =  '' + random(50, 150) + ' px;';
+        console.log('' + random(1, window.innerHeight) + 'px')
+        block.style.top = '' + random(1, window.innerHeight) + 'px';
+        block.style.left =  '' + random(1, window.innerWidth) + 'px';
+        block.style.width =  '' + random(50, 150) + 'px';
+        block.style.height =  '' + random(50, 150) + 'px';
 
-            wrap.prepend(block);
-        }
-        var block = document.querySelectorAll('.block');
-        block.forEach(function (elem){
-            elem.addEventListener('mouseover', function (e){
-                opt.crash = true
-            })
+        wrap.prepend(block);
+    }
+    var block = document.querySelectorAll('.block');
+    block.forEach(function (elem){
+        elem.addEventListener('mouseover', function (e){
+            opt.crash = true
         })
-    }, 5000);
+    })
 }
 
 function random(min, max){
