@@ -5,13 +5,13 @@ const worKer = {
     rate: '',
     days: '',
     getSalary: () => {},
-    role: 'роль',
+    role: '',
     currentCash: '',
 }
 
 admin(cashier){
     photo: '',
-    triplePremium: '',
+    extraPremium: '',
 }
 
 cashier(worKer){
