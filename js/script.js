@@ -33,7 +33,7 @@ const empl = () => {
 
     return ({
         add: () => employee += 1,
-        remove : () => employee += 1,
+        remove : () => employee -= 1,
         display: () => console.log(employee),
     })
 }
