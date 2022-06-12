@@ -31,11 +31,11 @@ consult(worKer){
 const empl = () => {
     let employee = 3
 
-    return {
+    return ({
         add: () => employee += 1,
         remove : () => employee += 1,
         display: () => console.log(employee),
-    }
+    })
 }
 
 let user = empl();
