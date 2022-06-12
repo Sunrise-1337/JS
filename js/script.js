@@ -32,8 +32,8 @@ const empl = () => {
     let employee = 3
 
     return ({
-        add: () => employee += 1,
-        remove : () => employee -= 1,
+        add: (step = 1) => employee += step,
+        remove : () => employee--,
         display: () => console.log(employee),
     })
 }
