@@ -32,15 +32,15 @@ class Control extends Lvl{
             this.ball.style.top = `${y}px`;
 
             if(y >= window.innerHeight - this.size){
-                this.minusLife();
-                clearInterval(this.fallInterval);
                 this.remove();
+                this.minusLife();
             }
         }, this.interval)
     }
 
     remove(){
         this.ball.remove();
-        delete this;
+        delete this.ball;
+        clearInterval(this.fallInterval);
     }
 }
