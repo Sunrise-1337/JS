@@ -1,0 +1,61 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.picture{
+    width: 500px;
+}
+
+.circle{
+    height: 10px;
+    width: 10px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.slider__controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.slider__ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider__wrap{
+    width: 500px;
+    overflow: hidden;
+}
+
+.slider__upper-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slider{
+    width: 680px;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 90px;
+    font-size: 70px;
+}
+
+.slider-wrap ul{
+    transition: 1s;
+    transform: translateX(0px);
+}
+
+.circ-active{
+    background-color: black;
+}
