@@ -1,0 +1,41 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pic{
+    height: 250px;
+    cursor: pointer;
+}
+
+.enemy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+}
+
+.enPic{
+    height: 80%;
+}
+
+.rock{
+    height: 180px;
+}
+
+.playerWrap{
+    display: flex;
+    align-items: center;
+    gap: 90px
+}
+
+.wrap{
+    padding: 20px 70px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
