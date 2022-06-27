@@ -68,7 +68,7 @@ $(document).ready(function (){
 
                 let visible = document.createElement("img"),
                     txt = `./assets/${i}/${o}.png`,
-                    second = `е-${i}`;
+                    second = `vasya-${i}`;
                 visible.className = `${second}-${o} active ${second}`
 
                 $(`.elemIc-${o}`).on("click", function (){

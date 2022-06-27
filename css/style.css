@@ -17,6 +17,7 @@ button{
     display: flex;
     background-color: dimgray;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .sectionWrap, .elemWrap{
@@ -64,7 +65,8 @@ button{
 
 .sceneWrap{
     height: 100%;
-    width: 100%;
+    width: 1080px;
+    flex-grow: 1;
     background-color: white;
     order: 3;
     padding: 40px;
@@ -80,7 +82,109 @@ button{
     position: relative;
 }
 
-.e-1{
+.theScene .active{
+    position: absolute;
+}
+
+.vasya-1{
+    z-index: 1;
     width: 80%;
-    margin: auto;
+    left: 100px;
+    top: 123px;
+}
+
+.vasya-6{
+    z-index: 2;
+}
+
+.vasya-2{
+    z-index: 3;
+    width: 3%;
+    top: 133px;
+    left: 130px;
+}
+
+.vasya-2-4{
+    top: 136px;
+    left: 133px;
+}
+
+.vasya-3{
+    z-index: 4;
+    width: 10%;
+    top: 49px;
+    left: 94px;
+}
+
+.vasya-3-1{
+    top: 86px;
+    left: 97px;
+}
+
+.vasya-3-2{
+    top: 88px;
+    left: 90px;
+}
+
+.vasya-3-3{
+    top: 49px;
+    left: 94px;
+}
+
+.vasya-4{
+    z-index: 3;
+    width: 5%;
+    left: 105px;
+    top: 158px;
+}
+
+.vasya-4-3{
+    left: 99px;
+    top: 144px;
+}
+
+.vasya-5{
+    z-index: 2;
+}
+
+.vasya-5-1{
+    width: 72%;
+    left: 174px;
+    top: 147px;
+}
+
+.vasya-5-2{
+    width: 68%;
+    left: 190px;
+    top: 191px;
+}
+
+.vasya-5-3{
+    width: 71%;
+    left: 188px;
+    top: 177px;
+}
+
+.vasya-5-4{
+    width: 56%;
+    left: 256px;
+    top: 266px;
+}
+
+.vasya-6-1{
+    width: 73%;
+    left: 171px;
+    top: 122px
+}
+
+.vasya-6-2{
+    width: 70%;
+    left: 188px;
+    top: 128px;
+}
+
+.vasya-6-3{
+    width: 70%;
+    left: 188px;
+    top: 134px;
 }
