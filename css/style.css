@@ -1,0 +1,86 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+button{
+    outline: none;
+    border: 2px solid black;
+}
+
+.creatorWrap{
+    display: flex;
+    background-color: dimgray;
+    height: 100%;
+}
+
+.sectionWrap, .elemWrap{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    background-color: white;
+}
+
+.elemWrap{
+    background-color: dimgray;
+}
+
+.socket{
+    height: 80px;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    margin-bottom: 6px;
+}
+
+.sectionWrap .socket{
+    border-right: 6px solid white;
+}
+
+.sectionWrap .socket:last-child{
+    margin-bottom: 0;
+}
+
+.addSec{
+    flex-grow: 1;
+    background-color: dimgray;
+}
+
+.secImg, .elemImg{
+    height: 50px;
+    max-width: 90%;
+}
+
+.sectionWrap .active{
+    border-right: 6px solid dimgray;
+}
+
+.sceneWrap{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    order: 3;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theScene{
+    border: 5px solid black;
+    height: 700px;
+    width: 1000px;
+    position: relative;
+}
+
+.e-1{
+    width: 80%;
+    margin: auto;
+}
