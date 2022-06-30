@@ -1,0 +1,36 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+p{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+a, a:visited{
+    color: lightblue;
+}
+
+.userWrap, .taskWrap{
+    display: flex;
+    gap: 10px;
+}
+
+.user{
+    width: 100px;
+}
+
+.userBtn, .taskBtn{
+    width: 60px;
+}
