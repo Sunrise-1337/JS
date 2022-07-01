@@ -41,7 +41,12 @@ let enemy = document.querySelector('.enemy'),
     scissorsZ = document.querySelector('.scissors'),
     paperZ = document.querySelector('.paper'),
     choice = '',
-    enChoice = '';
+    enChoice = '',
+    game = {
+        rock: 'paper',
+        paper: 'scissors',
+        scissors: 'rock',
+    };
 
 function click(opt){
     choice = opt
@@ -78,17 +83,8 @@ function check(opt){
     }
 
     if (opt == enChoice) return alert('Tie')
-    switch(opt) {
-        case `rock`:
-            enChoice == `paper` ? alert('You lost') : alert('You won')
-            break
-        case `scissors`:
-            enChoice == `rock` ? alert('You lost') : alert('You won')
-            break
-        case `paper`:
-            enChoice == `scissors` ? alert('You lost') : alert('You won')
-            break
-    }
+
+    enChoice == game[opt] ? alert('You lost') : alert('You won')
 }
 
 rockZ.addEventListener('click', () =>{
