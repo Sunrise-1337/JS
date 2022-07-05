@@ -1,14 +1,22 @@
-const generate = function () {
+const creElem = function (tag, className, apend, text = null, type = null, value = null, type2 = null, value2 = null) {
+        let elem = document.createElement(tag)
+        
+        elem.innerText = text
+        elem.className = className
+        if (type && value) {
+            elem.setAttribute(type, value)
+
+            if (type2 && value2) {
+                elem.setAttribute(type2, value2)
+            }
+        }
+        apend.append(elem)
+    },
+
+    generate = function () {
     // Спавним страницу
 
-    let user = document.createElement("input"),
-        userBtn = document.createElement("button"),
-        task = document.createElement("input"),
-        taskBtn = document.createElement("button"),
-        userWrap = document.createElement("div"),
-        taskWrap = document.createElement("div"),
-        ul = document.createElement("ul"),
-        value2 = '',
+    let value2 = '',
         createLi = function(value, arr, elem, choose, doneCheck) {
             let li = document.createElement('li'),
                 p = document.createElement('p'),
@@ -39,25 +47,13 @@ const generate = function () {
                 p.style.textDecoration = 'line-through'
             }
         };
+
+
         
-    user.setAttribute("type", "text"),
-    user.setAttribute("placeholder", "Your name"),
-    task.setAttribute("type", "text"),
-    task.setAttribute("placeholder", "New task");;
-    
-    user.className = "user",
-    task.className = "task",
-    userBtn.className = "userBtn",
-    taskBtn.className = "taskBtn",
-    userWrap.className = "userWrap";
-    taskWrap.className = "taskWrap";
-    
-    userBtn.innerText = "Search",
-    taskBtn.innerText = "Add";
-    
-    document.body.append(userWrap);
-    userWrap.append(user);
-    userWrap.append(userBtn);
+    creElem('div', 'userWrap', document.body)
+    let userWrap = document.querySelector('.userWrap')
+    creElem('input', 'user', userWrap, null, 'type', 'text', 'placeholder', 'Your name')
+    creElem('button', 'userBtn', userWrap, 'Search')
     
     let btnUser = document.querySelector(".userBtn");
     
@@ -68,10 +64,11 @@ const generate = function () {
     
         // Проверка на верность данных
         if (value.length > 2) {
-            document.body.append(taskWrap);
-            taskWrap.append(task);
-            taskWrap.append(taskBtn);
-            document.body.append(ul);
+            creElem('div', 'taskWrap', document.body)
+            let taskWrap = document.querySelector('.taskWrap')
+            creElem('input', 'task', taskWrap, null, 'type', 'text', 'placeholder', 'New task')
+            creElem('button', 'taskBtn', taskWrap, 'Add')
+            creElem('ul', null, document.body)
 
             let btnDo = document.querySelector('.taskBtn');
 
