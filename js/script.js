@@ -63,8 +63,7 @@ $(document).ready(function (){
                 Array.from($('.itemLetter')).forEach((el) => {
                     winCheck.push(el.innerText)
                     if (winCheck.join('') == item.answ) {
-                        endgame('win');
-                        opt.gameOver = true
+                        endgame('win')
                     }
                 })
             } 
@@ -76,8 +75,7 @@ $(document).ready(function (){
                     if (count > 1) {
                         alert(`Крутите барабан! x${count}`)
                     } else {
-                        endgame('lose');
-                        opt.gameOver = true
+                        endgame('lose')
                     }
                 }
             }
@@ -96,7 +94,7 @@ $(document).ready(function (){
             num -= 1
             timer()
             $('.timer').text(num)
-            if (num < 1) {
+            if (num == 0) {
                 endgame('lose')
                 clearInterval(clock)
                 $('.timer').text('0')
@@ -131,7 +129,7 @@ $(document).ready(function (){
                         case 11: wheel.score+=400; break;
                         case 12: wheel.score+=900; break;
                         case 13: wheel.score+=0; break;
-                        case 14: endgame('prise'), opt.gameOver = true; break;
+                        case 14: endgame('prise'); break;
                         case 15: wheel.score+=500; break;
                     }
                     $('.score').text(wheel.score)
@@ -156,6 +154,8 @@ $(document).ready(function (){
             case 'prise': alert(`Сектор приз на барабане!`); break; 
             case 'lose': alert(`Вы проиграли!`); break;  
         }
+        opt.gameOver = true
+        opt.time = false
         $('.score').text('0')
         $('.timer').text('0')
     }
